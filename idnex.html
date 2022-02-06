@@ -19,16 +19,16 @@
             <nav class="navbar flex">
                 <ul class="navbar-list flex">
                     <li class="navbar-item">
-                        <a href="#" class="link-part-page">About me</a>
+                        <a href="#about-me" class="link-part-page">About me</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="link-part-page">Recent Project</a>
+                        <a href="#latest-project" class="link-part-page">Recent Project</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="link-part-page">Skills</a>
+                        <a href="#skills" class="link-part-page">Skills</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="link-part-page link">Contact</a>
+                        <a href="./contact.html" class="link-part-page link">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -37,14 +37,26 @@
             <div class="first-sight">
                 <div class="hero grid">
                     <div class="hero-background"></div>
-                    <svg viewBox="0 0 500 80" preserveAspectRatio="none" class="hero-under-bg">
-                        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#"/>
+                    <svg
+                        viewBox="0 0 500 80"
+                        preserveAspectRatio="none"
+                        class="hero-under-bg"
+                    >
+                        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#" />
                     </svg>
                     <div class="hero-text flex">
                         <h1>HELLO.</h1>
-                        <p>I am <span class="accent-text">Roham Koohestani</span></p>
+                        <p>
+                            I am
+                            <span class="accent-text">Roham Koohestani</span>
+                        </p>
                     </div>
-                    <div class="hero-iamge"><img src="./media/profile_shot_Roham.jpeg" alt="Photo of myself"></div>
+                    <div class="hero-iamge">
+                        <img
+                            src="./media/profile_shot_Roham.jpeg"
+                            alt="Photo of myself"
+                        />
+                    </div>
                     <div class="scroll-down flex">
                         <div class="mouse-outside flex">
                             <div class="mouse-scroller"></div>
@@ -52,6 +64,79 @@
                     </div>
                 </div>
             </div>
+            <div class="about-me" id="about-me">
+                <div class="bg-islands grid">
+                    <div class="left-islands grid">
+                        <div class="text-container-island" id="island1">
+                            <h2 class="island-title">Who I am</h2>
+                            <p class="text-island">
+                                So to give you a summary about myself, I am a
+                                17-year-old Iranian boy who lives in the
+                                Netherlands. I am in love with programming, data
+                                science, and the world of computers in general.
+                                I am currently working on getting better at web
+                                development.
+                            </p>
+                        </div>
+                        <div class="text-container-island" id="island3">
+                            <h2 class="island-title">
+                                Strengts and weaknesses
+                            </h2>
+                            <p class="text-island">
+                                Some of my strengths are my<br> <span class="cycle-through-phrases" word="management skills, problem-solving skills, innovativeness"></span><br>
+                                However, I think that I still need to work on my
+                                ability to handle high-stress situations in a
+                                more proficient manner.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="line-split-islands"></div>
+                    <div class="right-islands grid">
+                        <div class="text-container-island" id="island2">
+                            <h2 class="island-title">What I want to do</h2>
+                            <p class="text-island">
+                                I aspire to become a computer scientist and
+                                hopefully, one day reach my childhood dream of
+                                becoming a full professor at a well-established
+                                university. But that is quite far away :) <br />
+                                Some short-term goals of mine are to get decent
+                                at front-end and back-end web dev, and then
+                                hopefully move onto do some stuff with AI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-project grid" id="latest-project">
+                <div class="pouring-water"></div>
+                <div class="title-project">
+                   <h2>My latest project</h2> 
+                   <p>This was a project we did for my computer cs class about Arduino's.</p>
+                </div>
+                <div class="screenshot-website">
+                    <img src="./media/screenshot-website.png" alt="screenshot website most recent project">
+                </div>
+            </div>
+            <div class="skills grid" id="skills">
+                <div class="title-skills flex">
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-icons flex">
+                    <img src="./media/accessibility.svg" alt="accessibility" class="icon white-svg">
+                    <img src="./media/c-plus-plus-programming-language.svg" alt="c plus plus" class="icon">
+                    <img src="./media/c-program.svg" alt="c" class="icon">
+                    <img src="./media/cmd-terminal.svg" alt="commandline" class="icon white-svg">
+                    <img src="./media/css.svg" alt="css" class="icon">
+                    <img src="./media/git.svg" alt="git" class="icon">
+                    <img src="./media/github.svg" alt="github" class="icon white-svg">
+                    <img src="./media/html.svg" alt="html" class="icon">
+                    <img src="./media/javascript-programming-language.svg" alt="javascript" class="icon">
+                    <img src="./media/python-programming-language.svg" alt="python" class="icon">
+                </div>
+            </div>
         </main>
+        <footer>
+            <p>made with <span class="heart">♥</span> in the Netherlands</p>   
+        </footer>
     </body>
 </html>
