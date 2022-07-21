@@ -13,3 +13,11 @@ document.querySelector('.screenshot-website').addEventListener('click', ()=>{
     window.open("https://www.arduinoproject.ga/"); 
 })
 
+document.querySelector('.mouse-outside').addEventListener('click', ()=>{
+    let rect = document.querySelector('.about-me').getBoundingClientRect();
+
+    window.scroll({
+        top: rect.top + 5,
+        behavior: 'smooth'
+    })
+})
