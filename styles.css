@@ -162,22 +162,21 @@ h3 {
     .navbar {
         z-index: 900;
         left: -100vw;
-        transition: all 1s cubic-bezier(.17,.67,1,1.23);
+        transition: all 1s cubic-bezier(0.17, 0.67, 1, 1.23);
     }
-
 
     .navbar[visibility="closed"] > .navbar-list > .navbar-item {
         opacity: 0;
     }
- 
+
     .navbar[visibility="open"] > .navbar-list > .navbar-item {
         opacity: 1;
     }
-       
+
     .navbar-item {
         transition: all 1s ease 0.8s;
-       animation-duration: 0.8s;
-       animation-delay: 0.8s;
+        animation-duration: 0.8s;
+        animation-delay: 0.8s;
     }
 
     .navbar > ul {
@@ -254,15 +253,16 @@ h3 {
     margin-left: 5rem;
 }
 
-.hero-iamge {
+.hero-image {
     z-index: 3;
     border-radius: 1rem;
     grid-column: 8 / span 4;
     grid-row: 4 / span 4;
 }
 
-.hero-iamge > img {
+.hero-image > img {
     border-radius: 1rem;
+    width: 90%;
 }
 
 .scroll-down {
@@ -311,13 +311,103 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1650px){
-    .hero{
-        height: 100%;
-        grid-template: repeat(1fr, 10) / repeat(1fr, 10);
+@media screen and (max-width: 1650px) {
+    .hero-text > h1 {
+        font-size: 7rem;
+    }
+
+    .hero-text > p {
+        font-size: 3.5rem;
+        padding-right: 5rem;
+        margin-left: 4rem;
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .first-sight {
+        height: 100vh;
+    }
+
+    .hero {
+        grid-template: repeat(1fr, 10) / repeat(1fr, 10);
+    }
+
+    .hero-text {
+        grid-column: 2 / span 6;
+        grid-row: 2 / span 4;
+    }
+
+    .hero-text > h1 {
+        font-size: 5rem;
+    }
+
+    .hero-text > p {
+        font-size: 2rem;
+        margin-left: 1rem;
+        padding-right: 2.5rem;
+    }
+
+    .hero-image {
+        grid-column: 7 / span 4;
+        grid-row: 4 / span 4;
+    }
+
+    .hero-image > img {
+        width: 100%;
+    }
+
+    .mouse-outside {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 730px){
+    .hero-text > h1{
+        font-size: 3.5rem;
+    }    
+
+    .hero-text > p{
+        font-size: 2rem;
+        padding-right: 3.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 500px){
+   
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image {
+        grid-column: 3 / -3;
+        grid-row: 5 / span 4;
+        margin-top: 1rem;
+    }
+
+    .hero-text > h1  {
+        font-size: 3.2rem
+    }
+
+    .hero-text > p {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        grid-column: 2 / span 9;
+        grid-row: 2 / span 4;
+    }
+
+
+    .mouse-outside {
+        height: 40%;
+        width: 100%;
+    }
+}
 /* styling about me */
 
 .about-me {
