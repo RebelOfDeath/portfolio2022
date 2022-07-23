@@ -5,8 +5,15 @@
     --yellow: #f4db7d;
     --white: #ffffff;
     --hover-link-nav: #8a8a8a;
-    --source-sans: 'Source Sans Pro', sans-serif;
+    --source-sans: "Source Sans Pro", sans-serif;
     --open-sans: "Open Sans ", sans-serif;
+
+    --ham-menu-size: 5vh;
+    --ham-menu-border-size: 2px;
+    --ham-menu-line-height: calc(var(--ham-menu-size) * 0.07);
+    --error-margin: calc(
+        var(--ham-menu-size) * 0.15
+    ); /*smaller sizes increase the value from 0.13 and for bigger sizes decrease it*/
 }
 
 html {
@@ -43,6 +50,63 @@ h3 {
     color: var(--light-blue);
 }
 
+/* hamburger menu */
+
+.ham-menu {
+    width: var(--ham-menu-size);
+    height: var(--ham-menu-size);
+    border: var(--ham-menu-border-size) var(--white) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin: 1.25vh;
+    visibility:hidden;
+}
+
+.ham-menu:hover {
+    cursor: pointer;
+}
+
+.ham-line {
+    width: calc(var(--ham-menu-size) * 0.8);
+    height: var(--ham-menu-line-height);
+    background-color: var(--white);
+    border-radius: 1rem;
+    margin: calc(var(--ham-menu-size) * 0.1);
+}
+
+.ham-first-line,
+.ham-second-line,
+.ham-third-line {
+    transition: all 0.5s ease-in-out;
+}
+
+.ham-menu[active="true"] > .ham-second-line {
+    opacity: 0;
+}
+
+.ham-menu[active="true"] > .ham-first-line {
+    transform: translateY(
+            calc(
+                var(--ham-menu-size) * 0.5 - (var(--ham-menu-line-height) * 0.5) -
+                    var(--error-margin)
+            )
+        )
+        rotate(45deg);
+}
+
+.ham-menu[active="true"] > .ham-third-line {
+    transform: translateY(
+            calc(
+                (var(--ham-menu-line-height) * 0.5) - var(--ham-menu-size) * 0.5 +
+                    var(--error-margin)
+            )
+        )
+        rotate(-45deg);
+}
+
 /* styling navbar */
 
 .navbar {
@@ -52,6 +116,7 @@ h3 {
     color: var(--white);
     height: 7.5vh;
     justify-content: center;
+    justify-items: center;
 }
 
 .navbar-list {
@@ -75,6 +140,9 @@ h3 {
 .link-part-page:hover {
     color: var(--orange);
     font-size: 2.2rem;
+}
+
+@media screen and (max-width: 100px) {
 }
 
 /* styling hero */
@@ -184,7 +252,8 @@ h3 {
     from {
         margin-top: 10%;
         opacity: 1;
-    } to {
+    }
+    to {
         margin-top: 60%;
         opacity: 0;
         transform: scale(1.1);
@@ -237,7 +306,6 @@ h3 {
     font-size: 1.4rem;
 }
 
-
 #island3 {
     grid-column: 5 / span 5;
     grid-row: 7 / span 3;
@@ -262,7 +330,6 @@ h3 {
     color: var(--orange);
 }
 
-
 /* styling latest project */
 
 .latest-project {
@@ -270,7 +337,7 @@ h3 {
     grid-template: repeat(18, 1fr) / repeat(10, 1fr);
 }
 
-.pouring-water{
+.pouring-water {
     grid-row: 1 / -1;
     grid-column: 1 / -1;
     background-color: var(--light-blue);
@@ -280,13 +347,13 @@ h3 {
 }
 
 @keyframes pour {
-    from{
+    from {
         height: 0%;
-    } to {
+    }
+    to {
         height: 100%;
     }
 }
-
 
 .title-project {
     grid-row: 3 / 17;
@@ -300,8 +367,8 @@ h3 {
     text-align: center;
 }
 
-.title-project>h2,
-.title-project>p {
+.title-project > h2,
+.title-project > p {
     margin: 2rem;
     margin-top: 4rem;
 }
@@ -322,7 +389,6 @@ h3 {
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
-
 
 /* styling skills */
 
@@ -369,7 +435,7 @@ h3 {
     color: red;
 }
 
-footer>p {
+footer > p {
     text-align: center;
 }
 
