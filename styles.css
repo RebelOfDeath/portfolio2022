@@ -16,7 +16,8 @@
     ); /*smaller sizes increase the value from 0.13 and for bigger sizes decrease it*/
 }
 
-html {
+html,
+body {
     box-sizing: border-box;
     font-family: var(--open-sans);
     scroll-behavior: smooth;
@@ -62,7 +63,7 @@ h3 {
     justify-content: space-between;
     position: absolute;
     margin: 1.25vh;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .ham-menu:hover {
@@ -142,7 +143,57 @@ h3 {
     font-size: 2.2rem;
 }
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 1000px) {
+    .ham-menu {
+        visibility: visible;
+        z-index: 901;
+    }
+
+    header {
+        background-color: var(--dark-blue);
+    }
+
+    nav {
+        position: absolute;
+        height: 100vh !important;
+        width: 100vw !important;
+    }
+
+    .navbar {
+        z-index: 900;
+        left: -100vw;
+        transition: all 1s cubic-bezier(.17,.67,1,1.23);
+    }
+
+
+    .navbar[visibility="closed"] > .navbar-list > .navbar-item {
+        opacity: 0;
+    }
+ 
+    .navbar[visibility="open"] > .navbar-list > .navbar-item {
+        opacity: 1;
+    }
+       
+    .navbar-item {
+        transition: all 1s ease 0.8s;
+       animation-duration: 0.8s;
+       animation-delay: 0.8s;
+    }
+
+    .navbar > ul {
+        flex-direction: column;
+        gap: 7vh;
+        justify-content: center;
+    }
+
+    .navbar[visibility="closed"] {
+        visibility: hidden;
+    }
+
+    .navbar[visibility="open"] {
+        visibility: visible;
+        left: 0;
+    }
 }
 
 /* styling hero */
@@ -257,6 +308,13 @@ h3 {
         margin-top: 60%;
         opacity: 0;
         transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1650px){
+    .hero{
+        height: 100%;
+        grid-template: repeat(1fr, 10) / repeat(1fr, 10);
     }
 }
 
