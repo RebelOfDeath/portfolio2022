@@ -13,6 +13,10 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Source+Sans+Pro:ital,wght@1,700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
     </head>
     <body>
         <header>
@@ -21,7 +25,7 @@
                 <div class="ham-line ham-second-line"></div>
                 <div class="ham-line ham-third-line"></div>
             </div>
-            <nav class="navbar flex">
+            <nav class="navbar flex" visibility="closed">
                 <ul class="navbar-list flex">
                     <li class="navbar-item">
                         <a href="#about-me" class="link-part-page">About me</a>
@@ -35,7 +39,7 @@
                         <a href="#skills" class="link-part-page">Skills</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="./contact.html" class="link-part-page link"
+                        <a href="#contact" class="link-part-page link"
                             >Contact</a
                         >
                     </li>
@@ -60,7 +64,7 @@
                             <span class="accent-text">Roham Koohestani</span>
                         </p>
                     </div>
-                    <div class="hero-iamge">
+                    <div class="hero-image">
                         <img
                             src="./media/profile_shot_Roham.jpeg"
                             alt="Photo of myself"
@@ -122,8 +126,22 @@
                 </div>
             </div>
             <div class="latest-project grid" id="latest-project">
-                <div class="pouring-water"></div>
-                <div class="title-project">
+                <div class="project-collection">
+                    <div class="title-project">
+                        <h2>My latest project</h2>
+                        <p>
+                            This was a project we did for my cs class about
+                            Arduino's.
+                        </p>
+                    </div>
+                    <div class="screenshot-website">
+                        <img
+                            src="./media/screenshot-website.png"
+                            alt="screenshot website most recent project"
+                        />
+                    </div>
+                </div>
+                <!-- <div class="title-project">
                     <h2>My latest project</h2>
                     <p>
                         This was a project we did for my cs class about
@@ -135,7 +153,7 @@
                         src="./media/screenshot-website.png"
                         alt="screenshot website most recent project"
                     />
-                </div>
+                </div> -->
             </div>
             <div class="skills grid" id="skills">
                 <div class="title-skills flex">
@@ -176,6 +194,32 @@
                         alt="python"
                         class="icon"
                     />
+                </div>
+            </div>
+            <div class="cta flex" id="contact">
+                <div class="cta-text">
+                    <h2>Do you have a good idea?</h2>
+                    <p>Then send me an email and let's get in touch :)</p>
+                </div>
+                <div class="cta-socials flex">
+                    <a
+                        href="https://github.com/RebelOfDeath/"
+                        target="__blank"
+                        class="links-contact"
+                        ><img
+                            src="./media/github.svg"
+                            alt="github icon"
+                            class="icon"
+                    /></a>
+                    <a
+                        href="https://www.linkedin.com/in/roham-k-975728211/"
+                        target="__blank"
+                        class="links-contact"
+                        ><img
+                            src="./media/linkedin-square.svg"
+                            alt="linkedin icon"
+                            class="icon"
+                    /></a>
                 </div>
             </div>
         </main>
